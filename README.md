@@ -10,7 +10,7 @@ DiaSpark is a comprehensive web application built with Gradio and Python, design
 - **Secure User Accounts:** Full authentication system powered by Supabase for user registration and login.
 - **Dynamic UI:** The interface intelligently adapts based on user input (e.g., showing a "Pregnancies" field only for female users).
 - **Automated BMI Calculator:** Users can either enter their BMI directly or have it calculated instantly from their weight and height.
-- **Downloadable PDF Reports:** Users can download a well-structured PDF summary of their prediction results, complete with a logo and disclaimer.
+- **Downloadable PDF Reports:** Users can download a well-structured PDF summary of their prediction results.
 - **Rich Informational Content:** Includes dedicated, easy-to-read sections on:
   - Factors Affecting Diabetes
   - A Healthy Eating Guide
