@@ -62,3 +62,8 @@ The backend relies on a specific Supabase project setup:
 
 1.  **Tables:** Two main tables are required (`users` and `predictions`). You can find their schemas in the SQL files or by examining the code.
 2.  **Database Triggers:** An essential trigger is used to automatically create a public `users` profile every time a new user signs up in the `auth.users` table. This trigger must be set up in the Supabase SQL Editor for the signup process to work.
+
+
+---
+
+Check out the [DiaSpark](https://huggingface.co/spaces/parass13/DiaSpark)
