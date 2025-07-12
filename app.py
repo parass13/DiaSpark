@@ -118,7 +118,7 @@ with gr.Blocks(title="DiaSpark: Your Health Management Platform", css=css) as de
                 signup_btn = gr.Button("Sign Up", variant="primary")
                 show_login_btn = gr.Button("Already have an account? Login.", variant="secondary")
         
-        # --- NEW "How to Use" Tab ---
+        # --- "How to Use" Tab ---
         with gr.TabItem("How to Use 💡"):
             render_how_to_use_guide()
 
@@ -201,7 +201,7 @@ with gr.Blocks(title="DiaSpark: Your Health Management Platform", css=css) as de
     # The logout handler must now also clear the weight and height fields.
     logout_btn.click(fn=logout, inputs=[user_state], outputs=[auth_message, user_state, main_tabs, email_login, pwd_login, preg, glucose, bp, insulin, bmi, age, result_output, pregnancies_row, weight, height, bmi_choice])
 
-    # --- CORRECTED BMI LOGIC ---
+    # --- BMI LOGIC ---
     def toggle_bmi_inputs(choice):
         if choice == "I know my BMI":
             # Return 4 values: one for each output component
@@ -228,7 +228,7 @@ with gr.Blocks(title="DiaSpark: Your Health Management Platform", css=css) as de
         final_bmi_report = bmi_val if bmi_val is not None else 0
         input_data = {"Pregnancies": p if p is not None else 0, "Glucose": g, "Blood Pressure": b, "Insulin": i, "BMI": final_bmi_report, "Age": age_val}
         file_path = create_report(user, input_data, result)
-        # CORRECTED TYPO: It should be 'file_path', not 'file_file'
+        
         return gr.update(value=file_path, visible=True)
     generate_report_btn.click(fn=handle_create_report, inputs=[user_state, preg, glucose, bp, insulin, bmi, age, result_output], outputs=[report_file_output])
     
